@@ -12,12 +12,55 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "fast-config",
+          "title": "Fast Config",
+          "icon": "resources/fast-config.svg"
+        }
+      ]
+    },
+    "views": {
+      "fast-config": [
+        {
+          "id": "fast-configs",
+          "name": "Configs"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "fast-config.helloWorld",
-        "title": "Hello World"
+        "command": "fast-config.add-file",
+        "title": "Add File",
+        "icon": {
+          "light": "resources/light/add.svg",
+          "dark": "resources/dark/add.svg"
+        }
+      },
+      {
+        "command": "fast-config.delete-file",
+        "title": "Delete File",
+        "icon": {
+          "light": "resources/light/delete.svg",
+          "dark": "resources/dark/delete.svg"
+        }
       }
-    ]
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "fast-config.add-file",
+          "when": "view == 'fast-configs'",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "fast-config.delete-file"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
