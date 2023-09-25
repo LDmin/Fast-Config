@@ -2,7 +2,9 @@
   "name": "fast-config",
   "displayName": "fast config",
   "description": "manager your config, fast, easy",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "ludongmin",
+  "repository": "git@github.com:LDmin/Fast-Config.git",
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -45,6 +47,30 @@
           "light": "resources/light/delete.svg",
           "dark": "resources/dark/delete.svg"
         }
+      },
+      {
+        "command": "fast-config.refresh-file",
+        "title": "Refresh File",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      },
+      {
+        "command": "fast-config.up-file",
+        "title": "Refresh File",
+        "icon": {
+          "light": "resources/light/up.svg",
+          "dark": "resources/dark/up.svg"
+        }
+      },
+      {
+        "command": "fast-config.down-file",
+        "title": "Refresh File",
+        "icon": {
+          "light": "resources/light/down.svg",
+          "dark": "resources/dark/down.svg"
+        }
       }
     ],
     "menus": {
@@ -53,11 +79,26 @@
           "command": "fast-config.add-file",
           "when": "view == 'fast-configs'",
           "group": "navigation"
+        },
+        {
+          "command": "fast-config.refresh-file",
+          "when": "view == 'fast-configs'",
+          "group": "navigation"
         }
       ],
       "view/item/context": [
         {
           "command": "fast-config.delete-file"
+        },
+        {
+          "command": "fast-config.up-file",
+          "when": "view == 'fast-configs'",
+          "group": "inline"
+        },
+        {
+          "command": "fast-config.down-file",
+          "when": "view == 'fast-configs'",
+          "group": "inline"
         }
       ]
     }

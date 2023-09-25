@@ -12,15 +12,12 @@ export function activate(context: vscode.ExtensionContext) {
   // This line of code will only be executed once when your extension is activated
   console.log('Congratulations, your extension "fast-config" is now active!');
 
-  context.subscriptions.push(...commands(context));
-
-  const fastTree = new FastTreeProvider(context);
-
-  vscode.window.registerTreeDataProvider("fast-configs", fastTree);
-
-  vscode.commands.registerCommand("fast-config.fast-tree-refresh", () =>
-    fastTree.refresh()
+  vscode.window.registerTreeDataProvider(
+    "fast-configs",
+    new FastTreeProvider(context)
   );
+
+  context.subscriptions.push(...commands(context));
 }
 
 // This method is called when your extension is deactivated

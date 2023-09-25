@@ -1,20 +1,12 @@
-import {
-  TreeItem,
-  TreeItemCollapsibleState,
-  Uri,
-  ExtensionContext,
-} from "vscode";
+import { TreeItem, TreeItemCollapsibleState } from "vscode";
 import * as path from "path";
 
 export interface IFast {
   uri: string;
   title: string;
-  order?: number;
 }
 
-export interface IConfigs {
-  [key: string]: IFast;
-}
+export type IConfigs = Array<IFast>;
 
 export class FastTreeItem extends TreeItem {
   constructor(fast: IFast) {
@@ -23,7 +15,6 @@ export class FastTreeItem extends TreeItem {
     this.id = fast.uri;
     this.description = fast.uri;
     this.tooltip = "点击打开文件";
-
     this.iconPath = {
       light: path.join(
         __filename,

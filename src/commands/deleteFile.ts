@@ -5,13 +5,13 @@ const disposable = (context: vscode.ExtensionContext) =>
   vscode.commands.registerCommand(
     "fast-config.delete-file",
     async (fast: FastTreeItem) => {
-      const configs =
-        context.globalState.get<IConfigs>("fast-config.configs") ?? {};
+      let configs =
+        context.globalState.get<IConfigs>("fast-config.configs") ?? [];
 
-      delete configs[fast.id!];
+      configs = configs.filter((c) => c.uri !== fast.id);
 
       context.globalState.update("fast-config.configs", configs);
-      vscode.commands.executeCommand("fast-config.fast-tree-refresh");
+      vscode.commands.executeCommand("fast-config.refresh-file");
     }
   );
 export default disposable;
