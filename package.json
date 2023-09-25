@@ -2,9 +2,13 @@
   "name": "fast-config",
   "displayName": "fast config",
   "description": "manager your config, fast, easy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "ludongmin",
-  "repository": "git@github.com:LDmin/Fast-Config.git",
+  "icon": "resources/fast-config.png",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:LDmin/Fast-Config.git"
+  },
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -58,7 +62,7 @@
       },
       {
         "command": "fast-config.up-file",
-        "title": "Refresh File",
+        "title": "Up File",
         "icon": {
           "light": "resources/light/up.svg",
           "dark": "resources/dark/up.svg"
@@ -66,7 +70,7 @@
       },
       {
         "command": "fast-config.down-file",
-        "title": "Refresh File",
+        "title": "Down File",
         "icon": {
           "light": "resources/light/down.svg",
           "dark": "resources/dark/down.svg"
