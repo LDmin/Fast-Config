@@ -1,11 +1,20 @@
-## Features
+## 特性
 
-Manager your config, fast, easy.
+这是一个简单便捷的查看和编辑配置文件的 vscode 插件。
+在开发的时候，总会产生各种配置文件，比如 .base_profile, hosts 等等，它们散落在各种地方，不方便查找。这个插件可以把它们收集起来，在 vscode 即可查看和编辑，也可享受代码提示（提前是装了相关的代码提示插件）。
+[插件地址](https://marketplace.visualstudio.com/items?itemName=ludongmin.fast-config)
 
-## Add config
+## 添加文件
 
-Click + to add config file
+点击添加文件图标，有两种方式添加文件：
 
-## Delete file
+1. 填写路径。直接填写路径，回车后输入文件名（默认是文件名），再回车即可。
+2. 选择文件。在文件弹窗选择文件（隐藏文件需要开启查看隐藏文件："Command + Shift + ."），选择文件后，输入文件名（默认是文件名），回车即可。
 
-Right click on the file and click Delete File.
+## 删除文件
+
+右键点击文件，点击 Delete File 即可。
+
+## 调整文件顺序
+
+鼠标指到文件，点击上下箭头调整文件顺序。

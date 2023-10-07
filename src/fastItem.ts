@@ -14,7 +14,7 @@ export class FastTreeItem extends TreeItem {
     this.label = fast.title;
     this.id = fast.uri;
     this.description = fast.uri;
-    this.tooltip = "点击打开文件";
+    this.tooltip = fast.uri;
     this.iconPath = {
       light: path.join(
         __filename,
