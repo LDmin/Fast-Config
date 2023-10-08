@@ -6,9 +6,16 @@ import openFile from "./openFile";
 import refreshFile from "./refreshFile";
 import upFile from "./upFile";
 import downFile from "./downFile";
+import finderFile from "./finderFile";
 
 export default function (context: vscode.ExtensionContext) {
-  return [addFile, deleteFile, openFile, refreshFile, upFile, downFile].map(
-    (c) => c(context)
-  );
+  return [
+    addFile,
+    deleteFile,
+    openFile,
+    refreshFile,
+    upFile,
+    downFile,
+    finderFile,
+  ].map((c) => c(context));
 }

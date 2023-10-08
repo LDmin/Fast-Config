@@ -10,7 +10,7 @@ export type IConfigs = Array<IFast>;
 
 export class FastTreeItem extends TreeItem {
   constructor(fast: IFast) {
-    super("fast config", TreeItemCollapsibleState.None);
+    super(fast.uri, TreeItemCollapsibleState.None);
     this.label = fast.title;
     this.id = fast.uri;
     this.description = fast.uri;
