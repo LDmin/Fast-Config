@@ -7,6 +7,7 @@ import refreshFile from "./refreshFile";
 import upFile from "./upFile";
 import downFile from "./downFile";
 import finderFile from "./finderFile";
+import copyPath from "./copyPath";
 
 export default function (context: vscode.ExtensionContext) {
   return [
@@ -17,5 +18,6 @@ export default function (context: vscode.ExtensionContext) {
     upFile,
     downFile,
     finderFile,
+    copyPath,
   ].map((c) => c(context));
 }
