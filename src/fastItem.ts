@@ -1,4 +1,4 @@
-import { TreeItem, TreeItemCollapsibleState } from "vscode";
+import { TreeItem, TreeItemCollapsibleState, ThemeIcon } from "vscode";
 import * as path from "path";
 
 export interface IFast {
@@ -15,17 +15,7 @@ export class FastTreeItem extends TreeItem {
     this.id = fast.uri;
     this.description = fast.uri;
     this.tooltip = fast.uri;
-    this.iconPath = {
-      light: path.join(
-        __filename,
-        "..",
-        "..",
-        "resources",
-        "light",
-        "file.svg"
-      ),
-      dark: path.join(__filename, "..", "..", "resources", "dark", "file.svg"),
-    };
+    this.iconPath = new ThemeIcon("file");
     this.command = {
       title: "fast config",
       command: "fast-config.open-file",
