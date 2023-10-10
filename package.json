@@ -2,7 +2,7 @@
   "name": "fast-config",
   "displayName": "fast config",
   "description": "manager your config, fast, easy",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "publisher": "ludongmin",
   "icon": "resources/fast-config.png",
   "repository": {
@@ -85,10 +85,12 @@
       ],
       "view/item/context": [
         {
-          "command": "fast-config.finder-file"
+          "command": "fast-config.finder-file",
+          "group": "1"
         },
         {
-          "command": "fast-config.copy-path"
+          "command": "fast-config.copy-path",
+          "group": "1"
         },
         {
           "command": "fast-config.delete-file"

@@ -1,5 +1,4 @@
 import { TreeItem, TreeItemCollapsibleState, ThemeIcon } from "vscode";
-import * as path from "path";
 
 export interface IFast {
   uri: string;
